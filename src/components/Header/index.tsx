@@ -10,7 +10,7 @@ const Header = () => {
       <Input
         type="search"
         placeholder="Search..."
-        className="md:w-[300px] lg:w-[629px] shadow-sm bg-gray-50 "
+        className="md:w-[300px] lg:w-[629px] shadow-sm bg-gray-50"
       />
       <div className="flex gap-3 items-center justify-center">
         <div className="p-2 w-10 h-10 rounded-full bg-gray-100">
