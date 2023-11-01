@@ -6,6 +6,7 @@ import folder from "@/app/assets/folder.svg";
 import text from "@/app/assets/text.svg";
 import saved from "@/app/assets/saved.svg";
 import DataTable from "@/components/DataTable";
+import TranscriberModal from "@/components/TranscriberModal";
 
 const Home = () => {
   return (
@@ -22,7 +23,7 @@ const Home = () => {
                 Upload your audio and Video to covert to text
               </p>
             </div>
-            <Button className="bg-[#0048AD] px-6 py-4">Transcribe file</Button>
+            <TranscriberModal />
           </div>
         </section>
         <section>
