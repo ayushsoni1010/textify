@@ -1,14 +1,16 @@
 import StatsCTA from "@/components/StatsCTA";
 import Header from "@/components/Header";
-import { Button } from "@/components/ui/button";
 import React from "react";
 import folder from "@/app/assets/folder.svg";
 import text from "@/app/assets/text.svg";
 import saved from "@/app/assets/saved.svg";
 import DataTable from "@/components/DataTable";
 import TranscriberModal from "@/components/TranscriberModal";
+import { askGenie } from "@/services/askGenie";
 
 const Home = () => {
+  // askGenie();
+
   return (
     <div className="flex-1 md:flex h-screen relative ml-[270px]">
       <Header />
