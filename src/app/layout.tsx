@@ -31,6 +31,7 @@ export default function RootLayout({
             "flex min-h-screen font-sans antialiased",
             fontSans.variable
           )}
+          suppressHydrationWarning
         >
           <Sidebar />
           {children}
