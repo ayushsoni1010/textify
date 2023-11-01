@@ -11,13 +11,9 @@ export async function askGenie() {
       body: JSON.stringify({
         messages: [
           {
-            role: "system",
-            content: "You are a helpful assistant.",
-          },
-          {
             role: "user",
             content:
-              'Translate the following English text to French: "Hello, how are you?"',
+              "Write a program in C language for finding the factorial of 100",
           },
         ],
       }),
@@ -28,7 +24,8 @@ export async function askGenie() {
     }
 
     const data = await response.text();
-    console.log(data); // Handle the OpenAI response here
+    console.log(data);
+    return data; // Handle the OpenAI response here
   } catch (error) {
     console.error("Error:", error);
   }

@@ -1,15 +1,24 @@
+"use client"
+
 import StatsCTA from "@/components/StatsCTA";
 import Header from "@/components/Header";
-import React from "react";
+import React, { useState } from "react";
 import folder from "@/app/assets/folder.svg";
 import text from "@/app/assets/text.svg";
 import saved from "@/app/assets/saved.svg";
 import DataTable from "@/components/DataTable";
 import TranscriberModal from "@/components/TranscriberModal";
 import { askGenie } from "@/services/askGenie";
+import { Button } from "@/components/ui/button";
 
 const Home = () => {
-  // askGenie();
+  const [data, setData] = useState("");
+  const handleClick = async () => {
+    console.log("Click");
+    const res: any = await askGenie();
+    console.log(res, "response");
+    setData(res);
+  };
 
   return (
     <div className="flex-1 md:flex h-screen relative ml-[270px]">
@@ -50,6 +59,10 @@ const Home = () => {
             />
           </div>
         </section>
+        <Button className="w-full bg-[#0048AD]" onClick={handleClick}>
+          Upgrade
+        </Button>
+        <p>{data ? data : "No data to show"}</p>
         <section>
           <DataTable />
         </section>
