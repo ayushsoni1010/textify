@@ -1,7 +1,6 @@
-import { helpers } from "@/helpers";
+import { helpers } from "../helpers";
 
-// In your React component or JavaScript file
-export async function askGenie() {
+export async function askGenie(prompt: string) {
   try {
     const response = await fetch(`${helpers.apiURL}/api/openai`, {
       method: "POST",
@@ -12,8 +11,7 @@ export async function askGenie() {
         messages: [
           {
             role: "user",
-            content:
-              "Write a program in C language for finding the factorial of 100",
+            content: prompt,
           },
         ],
       }),
@@ -25,7 +23,7 @@ export async function askGenie() {
 
     const data = await response.text();
     console.log(data);
-    return data; // Handle the OpenAI response here
+    return data;
   } catch (error) {
     console.error("Error:", error);
   }
