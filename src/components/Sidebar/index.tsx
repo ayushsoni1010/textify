@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import React from "react";
-import { sidebarOptions } from "@/data/__sidebar.js";
+import { sidebarOptions } from "@/data/__sidebar";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import rocket from "@/app/assets/rocket.svg";
