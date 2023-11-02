@@ -5,8 +5,9 @@ import integrations from "@/app/assets/integrations.svg";
 import trash from "@/app/assets/trash.svg";
 import settings from "@/app/assets/settings.svg";
 import help from "@/app/assets/help.svg";
+import { NavbarTypes } from "@/types/navbar";
 
-export const sidebarOptions = [
+export const sidebarOptions: NavbarTypes[] = [
   {
     index: 1,
     title: "Home",
