@@ -8,12 +8,12 @@
   <img src="https://img.shields.io/badge/Tech%20Stack-Next.js%20%7C%20TypeScript%20%7C%20OpenAI%20%7C%20Radix_UI%20%7C%20API's%20%7C%20TailwindCSS-0288d1.svg" alt="Tech Stack" />
 </p>
 
-
 <p align="center">
   <i>Convert Spoken Content into Written Text with Ease!</i>
 </p>
 
 ## Table of Contents
+
 - [Introduction](#introduction-)
 - [Features](#features-)
 - [Getting Started](#getting-started-)
@@ -47,12 +47,14 @@ To get started with Textify, follow the installation and usage instructions in t
    ```bash
    git clone https://github.com/ayushsoni1010/textify.git
    ```
+
 2. Install the required dependencies:
 
    ```bash
    cd textify
    npm install
    ```
+
 3. Configure your environment, including API keys or settings (if applicable).
 4. Start the application:
    ```bash
@@ -61,6 +63,7 @@ To get started with Textify, follow the installation and usage instructions in t
 5. Access Textify in your web browser at `http://localhost:3000`.
 
 ## Usage 📊
+
 1. Upload your audio or video file to Textify.
 
 2. Textify will convert the spoken content into written text.
@@ -68,9 +71,11 @@ To get started with Textify, follow the installation and usage instructions in t
 3. View and edit your transcriptions in the user-friendly dashboard.
 
 ## Contributing 🤝
+
 Contributions to Textify are encouraged! Feel free to open issues, submit pull requests, or provide feedback to help enhance the project.
 
 ## License 📜
+
 This project is licensed under the [Apache License](LICENSE).
 
 ## Issues 🐛
@@ -86,6 +91,7 @@ If you encounter any issues or have suggestions, please report them in the [issu
 - TypeScript
 - TailwindCSS
 - OpenAI
+- Whisper API
 - Prompt Engineering
 
 ## Learn More 📚
