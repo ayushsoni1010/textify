@@ -8,7 +8,7 @@ const helpers: any = {
   apiURL:
     process.env.NODE_ENV !== "production"
       ? `http://localhost:3000`
-      : `https://textify-alpha.vercel.app`,
+      : `https://textify-ai.vercel.app`,
 };
 
 export { helpers };
