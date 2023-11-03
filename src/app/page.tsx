@@ -53,12 +53,7 @@ const Home = () => {
                 Upload your audio and Video to covert to text
               </p>
             </div>
-            <TranscriberModal
-              text={textResult}
-              setText={setTextResult}
-              loading={loading}
-              setLoading={setLoading}
-            />
+            <TranscriberModal />
           </div>
         </section>
         <section>
@@ -83,26 +78,6 @@ const Home = () => {
             />
           </div>
         </section>
-        {/* Improve the skeleton loading later */}
-        {loading && (
-          <Card className="p-6 grid grid-cols-4 gap-4">
-            <Skeleton className="w-[200px] h-[40px] rounded-full" />
-            <Skeleton className="w-[200px] h-[40px] rounded-full" />
-            <Skeleton className="w-[200px] h-[40px] rounded-full" />
-            <Skeleton className="w-[200px] h-[40px] rounded-full" />
-            <Skeleton className="w-[200px] h-[40px] rounded-full" />
-            <Skeleton className="w-[200px] h-[40px] rounded-full" />
-            <Skeleton className="w-[200px] h-[40px] rounded-full" />
-            <Skeleton className="w-[200px] h-[40px] rounded-full" />
-          </Card>
-        )}
-
-        {!loading && textResult && (
-          <Card className="p-6">
-            <div>Transcribed Result: {textResult}</div>
-          </Card>
-        )}
-
         <section>
           <DataTable />
         </section>
@@ -111,7 +86,17 @@ const Home = () => {
             <h1 className="text-2xl font-bold">
               Welcome to Next.js AI Chatbot!
             </h1>
-            {loading && <p>Generating...</p>}
+            {loading && (
+              <div className="text-center">
+                <p>Generating...</p>
+                {/* Improve the skeleton loading later */}
+                <div className="flex flex-col gap-1 items-center">
+                  <Skeleton className="w-[200px] h-[10px] rounded" />
+                  <Skeleton className="w-[200px] h-[10px] rounded" />
+                  <Skeleton className="w-[200px] h-[10px] rounded" />
+                </div>
+              </div>
+            )}
             <p>
               {data
                 ? data
@@ -136,22 +121,3 @@ const Home = () => {
 };
 
 export default Home;
-
-// import Transcribe from "@/components/Transcribe";
-
-// export default function IndexPage() {
-//   return (
-//     <section className="container grid items-center gap-6 pt-6 pb-8 md:py-10">
-//       <div className="flex max-w-[980px] flex-col items-start gap-2">
-//         <h1 className="text-3xl font-extrabold leading-tight tracking-tighter md:text-4xl">
-//           Transcribe your videos.
-//         </h1>
-//         <p className="max-w-[700px] text-lg text-muted-foreground">
-//           Just upload your video or audio and Whisper API will do the rest.
-//           Also, you can translate your transcription to listed languages.
-//         </p>
-//       </div>
-//       <Transcribe />
-//     </section>
-//   );
-// }

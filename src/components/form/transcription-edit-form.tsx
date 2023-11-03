@@ -107,15 +107,24 @@ const TranscriptionEditForm = () => {
           </SelectContent>
         </Select>
       </div>
-      <div className="flex items-center gap-6">
-        <Button disabled={tokenSizeMessage.type !== "success"} type="submit">
+      <div className="flex items-center gap-4">
+        <Button
+          disabled={tokenSizeMessage.type !== "success"}
+          type="submit"
+          className="w-full bg-[#0048AD]"
+        >
           {!handling ? (
             "Translate"
           ) : (
             <span className="animate-pulse">Translating...</span>
           )}
         </Button>
-        <Button type="button" onClick={downloadHandler} variant="outline">
+        <Button
+          type="button"
+          onClick={downloadHandler}
+          variant="outline"
+          className="w-full"
+        >
           Download
         </Button>
       </div>
